@@ -191,7 +191,7 @@ namespace insa
             Confirm.Enabled = true;
             Cancel.Enabled = true;
         }
-        //처음 폼이 로드될 때 입력,수정,삭제 버튼만 활성화되며, 확인,취소를 사용하지 못하게 비활성화 시킨다.
+        //처음 폼이 로드될 때 입력,수정,삭제 버튼만 활성화되며, 확인,취소를 사용하지 못하게 비활성화 시킨다 .
         private void btn_control2()
         {
             insert.Enabled = true;
