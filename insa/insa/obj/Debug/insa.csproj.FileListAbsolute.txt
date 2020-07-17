@@ -81,3 +81,5 @@ C:\Users\Mac_1\Desktop\insa\insa\insa\obj\Debug\insa.csproj.GenerateResource.cac
 C:\Users\Mac_1\Desktop\insa\insa\insa\obj\Debug\insa.csproj.CopyComplete
 C:\Users\Mac_1\Desktop\insa\insa\insa\obj\Debug\insa.exe
 C:\Users\Mac_1\Desktop\insa\insa\insa\obj\Debug\insa.pdb
+C:\Users\Mac_1\Desktop\insa\insa\insa\bin\Debug\ConfigParser.dll
+C:\Users\Mac_1\Desktop\insa\insa\insa\bin\Debug\WakaTime.dll

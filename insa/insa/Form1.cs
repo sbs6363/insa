@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using Oracle.ManagedDataAccess.Client;
 
+
 namespace insa
 {
     public partial class Form1 : MetroForm

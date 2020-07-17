@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
+using System.Data.SqlClient;
+using Oracle.ManagedDataAccess.Client;
+
+
 namespace insa
 {
     public partial class Form6 : MetroForm
@@ -16,6 +20,15 @@ namespace insa
         {
             InitializeComponent();
         }
+        OracleConnection pgOraConn;
+        OracleCommand pgOraCmd;
+        SqlDataAdapter adapter = null;
+        SqlConnection conn = null;
+
+        string dbIp = "222.237.134.74";
+        string dbName = "Ora7";
+        string dbId = "EDU";
+        string dbPw = "edu1234";
         public Form6(int tabindexNumber)
         {
             InitializeComponent();
@@ -31,6 +44,30 @@ namespace insa
 
             dataGridView4.Columns.Add("dept_code", "부서코드");
             dataGridView4.Columns.Add("dept_name", "부서명");
+
+            dataGridView4.Rows.Clear();
+            dataGridView4.Columns.Clear();
+
+
+            pgOraConn = new OracleConnection($"Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST={dbIp})(PORT=1522)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME={dbName})));User ID={dbId};Password={dbPw};Connection Timeout=30;");
+            pgOraConn.Open();
+            pgOraCmd = pgOraConn.CreateCommand();
+            string sql1 = "select dept_code,dept_name from THRM_DEPT_KJH";
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = pgOraConn;
+            cmd.CommandText = sql1;
+            OracleDataReader rd = cmd.ExecuteReader();
+
+            int cnt = 0;
+               
+            while (rd.Read())
+            {
+                dataGridView4.Rows.Add();
+                dataGridView4.Rows[cnt].Cells["dept_code"].Value = rd["dept_code"].ToString();
+                dataGridView4.Rows[cnt].Cells["dept_name"].Value = rd["dept_name"].ToString();
+
+                cnt++;
+            }
         }
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {

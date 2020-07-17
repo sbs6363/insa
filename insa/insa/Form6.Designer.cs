@@ -61,7 +61,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(23, 116);
+            this.tabControl1.Location = new System.Drawing.Point(23, 82);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(278, 513);
@@ -172,7 +172,7 @@
             this.metroTextBox1.CustomButton.UseSelectable = true;
             this.metroTextBox1.CustomButton.Visible = false;
             this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(356, 116);
+            this.metroTextBox1.Location = new System.Drawing.Point(356, 82);
             this.metroTextBox1.MaxLength = 32767;
             this.metroTextBox1.Name = "metroTextBox1";
             this.metroTextBox1.PasswordChar = '\0';
@@ -202,7 +202,7 @@
             this.metroTextBox2.CustomButton.UseSelectable = true;
             this.metroTextBox2.CustomButton.Visible = false;
             this.metroTextBox2.Lines = new string[0];
-            this.metroTextBox2.Location = new System.Drawing.Point(356, 158);
+            this.metroTextBox2.Location = new System.Drawing.Point(356, 124);
             this.metroTextBox2.MaxLength = 32767;
             this.metroTextBox2.Name = "metroTextBox2";
             this.metroTextBox2.PasswordChar = '\0';
@@ -219,7 +219,7 @@
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(487, 116);
+            this.metroButton1.Location = new System.Drawing.Point(487, 82);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(82, 64);
             this.metroButton1.TabIndex = 3;
@@ -228,7 +228,7 @@
             // 
             // metroButton2
             // 
-            this.metroButton2.Location = new System.Drawing.Point(487, 284);
+            this.metroButton2.Location = new System.Drawing.Point(487, 250);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(82, 64);
             this.metroButton2.TabIndex = 4;
@@ -237,7 +237,7 @@
             // 
             // metroButton3
             // 
-            this.metroButton3.Location = new System.Drawing.Point(487, 202);
+            this.metroButton3.Location = new System.Drawing.Point(487, 168);
             this.metroButton3.Name = "metroButton3";
             this.metroButton3.Size = new System.Drawing.Size(82, 64);
             this.metroButton3.TabIndex = 5;
@@ -250,7 +250,7 @@
             this.htmlLabel1.AutoScrollMinSize = new System.Drawing.Size(34, 22);
             this.htmlLabel1.AutoSize = false;
             this.htmlLabel1.BackColor = System.Drawing.SystemColors.Window;
-            this.htmlLabel1.Location = new System.Drawing.Point(307, 117);
+            this.htmlLabel1.Location = new System.Drawing.Point(307, 83);
             this.htmlLabel1.Name = "htmlLabel1";
             this.htmlLabel1.Size = new System.Drawing.Size(34, 22);
             this.htmlLabel1.TabIndex = 6;
@@ -262,7 +262,7 @@
             this.htmlLabel2.AutoScrollMinSize = new System.Drawing.Size(34, 22);
             this.htmlLabel2.AutoSize = false;
             this.htmlLabel2.BackColor = System.Drawing.SystemColors.Window;
-            this.htmlLabel2.Location = new System.Drawing.Point(307, 158);
+            this.htmlLabel2.Location = new System.Drawing.Point(307, 124);
             this.htmlLabel2.Name = "htmlLabel2";
             this.htmlLabel2.Size = new System.Drawing.Size(34, 22);
             this.htmlLabel2.TabIndex = 7;
