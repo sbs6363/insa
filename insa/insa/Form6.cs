@@ -29,6 +29,8 @@ namespace insa
         string dbName = "Ora7";
         string dbId = "EDU";
         string dbPw = "edu1234";
+
+
         public Form6(int tabindexNumber)
         {
             InitializeComponent();

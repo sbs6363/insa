@@ -108,6 +108,7 @@ namespace insa
             }
             else if (tabControl1.SelectedTab.TabIndex == 1)
             {
+                //fam_empno 텍스트 박스가 비어 있거나 공백 문자로 구성되어 있을 경우 발생하는 문구
                 if (String.IsNullOrWhiteSpace(fam_empno.Text))
                 {
                     MessageBox.Show("인사기본사항에서 사원번호를 입력해주세요.");
@@ -129,9 +130,9 @@ namespace insa
             }
             else if (tabControl1.SelectedTab.TabIndex == 2)
             {
-                if (String.IsNullOrWhiteSpace(fam_empno.Text))
+                if (String.IsNullOrWhiteSpace(edu_empno.Text))
                 {
-                    MessageBox.Show("인사기본사항에서 사원번호를 입력해주세요.");
+                    MessageBox.Show("학력사항에서 사원번호를 입력해주세요.");
                     return;
                 }
                 else
@@ -163,21 +164,16 @@ namespace insa
                     btn_control1();
                     checktext.Text = "A_i";
                     MessageBox.Show("상벌이력을 입력해주세요.");
-                    award_type.Text = "";
-                    award_no.Text = "";
-                    award_kind.Text = "";
-                    award_organ.Text = "";
-                    award_content.Text = "";
-                    award_inout.Text = "";
+
 
 
                 }
             }
             else if (tabControl1.SelectedTab.TabIndex == 4)
             {
-                if (String.IsNullOrWhiteSpace(award_empno.Text))
+                if (String.IsNullOrWhiteSpace(car_empno.Text))
                 {
-                    MessageBox.Show("인사기본사항에서 사원번호를 입력해주세요");
+                    MessageBox.Show("경력사항에서 사원번호를 입력해주세요");
                     return;
                 }
                 else
@@ -197,9 +193,9 @@ namespace insa
             }
             else if (tabControl1.SelectedTab.TabIndex == 5)
             {
-                if (String.IsNullOrWhiteSpace(award_empno.Text))
+                if (String.IsNullOrWhiteSpace(lic_empno.Text))
                 {
-                    MessageBox.Show("인사기본사항에서 사원번호를 입력해주세요");
+                    MessageBox.Show("자격면허에서 사원번호를 입력해주세요");
                     return;
                 }
                 else
@@ -378,187 +374,187 @@ namespace insa
                 }
 
             }
-            else if (tabControl1.SelectedTab.TabIndex == 2)
-            {
-                checktext.Text = "E_u";
-                if (String.IsNullOrWhiteSpace(edu_empno.Text))
+                else if (tabControl1.SelectedTab.TabIndex == 2)
                 {
-                    MessageBox.Show("사원번호를 입력하세요");
-                    return;
+                    checktext.Text = "E_u";
+                    if (String.IsNullOrWhiteSpace(edu_empno.Text))
+                    {
+                        MessageBox.Show("사원번호를 입력하세요");
+                        return;
+                    }
+                    if (String.IsNullOrWhiteSpace(edu_schnm.Text))
+                    {
+                        MessageBox.Show("학교명을 입력하세요.");
+                        return;
+
+                    }
+                    else if (String.IsNullOrWhiteSpace(edu_dept.Text))
+                    {
+                        MessageBox.Show("학과(전공)을 입력해주세요.");
+                        return;
+                    }
+                    else if (String.IsNullOrWhiteSpace(edu_grade.Text))
+                    {
+                        MessageBox.Show("성적을 입력해주세요.");
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("수정하실 내용을 수정해주세요.");
+                        btn_control1();
+                        edu_loe.Enabled = false;
+                    }
                 }
-                if (String.IsNullOrWhiteSpace(edu_schnm.Text))
+                else if (tabControl1.SelectedTab.TabIndex == 3)
                 {
-                    MessageBox.Show("학교명을 입력하세요.");
-                    return;
+                    checktext.Text = "A_u";
+                    if (String.IsNullOrWhiteSpace(award_empno.Text))
+                    {
+                        MessageBox.Show("사원번호를 입력하세요");
+                        return;
+                    }
+                    if (String.IsNullOrWhiteSpace(award_kind.Text))
+                    {
+                        MessageBox.Show("상벌종별을 입력해주세요.");
+                        return;
+                    }
+                    if (String.IsNullOrWhiteSpace(award_organ.Text))
+                    {
+                        MessageBox.Show("시행처를 입력해주세요.");
+                        return;
+                    }
+                    if (String.IsNullOrWhiteSpace(award_no.Text))
+                    {
+                        MessageBox.Show("상벌번호를 입력해주세요.");
+                        return;
+                    }
+                    if (String.IsNullOrWhiteSpace(award_type.Text))
+                    {
+                        MessageBox.Show("상벌구분을 선택해주세요.");
+                        return;
+                    }
+                    if (String.IsNullOrWhiteSpace(award_content.Text))
+                    {
+                        MessageBox.Show("상벌내용을 입력해주세요.");
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("수정하실 내용을 수정해주세요.");
+                        btn_control1();
+                        award_date.Enabled = false;
+
+                    }
+                }
+                else if (tabControl1.SelectedTab.TabIndex == 4)
+                {
+                    checktext.Text = "C_u";
+                    if (String.IsNullOrWhiteSpace(car_empno.Text))
+                    {
+                        MessageBox.Show("사원번호를 입력하세요");
+                        return;
+                    }
+                    if (String.IsNullOrWhiteSpace(car_com.Text))
+                    {
+                        MessageBox.Show("근무처명을 입력해주세요.");
+                        return;
+                    }
+                    if (String.IsNullOrWhiteSpace(car_region.Text))
+                    {
+                        MessageBox.Show("소재지를 입력해주세요.");
+                        return;
+                    }
+                    if (String.IsNullOrWhiteSpace(car_pos.Text))
+                    {
+                        MessageBox.Show("최종직급을 입력해주세요.");
+                        return;
+                    }
+                    if (String.IsNullOrWhiteSpace(car_dept.Text))
+                    {
+                        MessageBox.Show("담당부서를 입력해주세요.");
+                        return;
+                    }
+                    if (String.IsNullOrWhiteSpace(car_job.Text))
+                    {
+                        MessageBox.Show("담당업무를 입력해주세요.");
+                        return;
+                    }
+                    if (String.IsNullOrWhiteSpace(car_reason.Text))
+                    {
+                        MessageBox.Show("퇴직/이직사유를 입력해주세요.");
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("수정하실 내용을 수정해주세요.");
+                        btn_control1();
+                        car_com.Enabled = false;
+
+                    }
 
                 }
-                else if (String.IsNullOrWhiteSpace(edu_dept.Text))
+                else if (tabControl1.SelectedTab.TabIndex == 5)
                 {
-                    MessageBox.Show("학과(전공)을 입력해주세요.");
-                    return;
-                }
-                else if (String.IsNullOrWhiteSpace(edu_grade.Text))
-                {
-                    MessageBox.Show("성적을 입력해주세요.");
-                    return;
-                }
-                else
-                {
-                    MessageBox.Show("수정하실 내용을 수정해주세요.");
-                    btn_control1();
-                    edu_loe.Enabled = false;
-                }
-            }
-            else if (tabControl1.SelectedTab.TabIndex == 3)
-            {
-                checktext.Text = "A_u";
-                if (String.IsNullOrWhiteSpace(award_empno.Text))
-                {
-                    MessageBox.Show("사원번호를 입력하세요");
-                    return;
-                }
-                if (String.IsNullOrWhiteSpace(award_kind.Text))
-                {
-                    MessageBox.Show("상벌종별을 입력해주세요.");
-                    return;
-                }
-                if (String.IsNullOrWhiteSpace(award_organ.Text))
-                {
-                    MessageBox.Show("시행처를 입력해주세요.");
-                    return;
-                }
-                if (String.IsNullOrWhiteSpace(award_no.Text))
-                {
-                    MessageBox.Show("상벌번호를 입력해주세요.");
-                    return;
-                }
-                if (String.IsNullOrWhiteSpace(award_type.Text))
-                {
-                    MessageBox.Show("상벌구분을 선택해주세요.");
-                    return;
-                }
-                if (String.IsNullOrWhiteSpace(award_content.Text))
-                {
-                    MessageBox.Show("상벌내용을 입력해주세요.");
-                    return;
-                }
-                else
-                {
-                    MessageBox.Show("수정하실 내용을 수정해주세요.");
-                    btn_control1();
-                    award_date.Enabled = false;
+                    checktext.Text = "L_u";
+                    if (String.IsNullOrWhiteSpace(lic_empno.Text))
+                    {
+                        MessageBox.Show("사원번호를 입력하세요.");
+                        return;
+                    }
+                    if (String.IsNullOrWhiteSpace(lic_code.Text))
+                    {
+                        MessageBox.Show("자격면허코드를 입력해주세요.");
+                        return;
+                    }
+                    if (String.IsNullOrWhiteSpace(lic_grade.Text))
+                    {
+                        MessageBox.Show("급수를 입력해주세요.");
+                        return;
+                    }
+                    if (String.IsNullOrWhiteSpace(lic_organ.Text))
+                    {
+                        MessageBox.Show("발급기관을 입력해주세요.");
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("수정하실 내용을 수정해주세요.");
+                        btn_control1();
+                        lic_code.Enabled = false;
 
+                    }
                 }
-            }
-            else if (tabControl1.SelectedTab.TabIndex == 4)
-            {
-                checktext.Text = "C_u";
-                if (String.IsNullOrWhiteSpace(car_empno.Text))
+                else if (tabControl1.SelectedTab.TabIndex == 6)
                 {
-                    MessageBox.Show("사원번호를 입력하세요");
-                    return;
-                }
-                if (String.IsNullOrWhiteSpace(car_com.Text))
-                {
-                    MessageBox.Show("근무처명을 입력해주세요.");
-                    return;
-                }
-                if (String.IsNullOrWhiteSpace(car_region.Text))
-                {
-                    MessageBox.Show("소재지를 입력해주세요.");
-                    return;
-                }
-                if (String.IsNullOrWhiteSpace(car_pos.Text))
-                {
-                    MessageBox.Show("최종직급을 입력해주세요.");
-                    return;
-                }
-                if (String.IsNullOrWhiteSpace(car_dept.Text))
-                {
-                    MessageBox.Show("담당부서를 입력해주세요.");
-                    return;
-                }
-                if (String.IsNullOrWhiteSpace(car_job.Text))
-                {
-                    MessageBox.Show("담당업무를 입력해주세요.");
-                    return;
-                }
-                if (String.IsNullOrWhiteSpace(car_reason.Text))
-                {
-                    MessageBox.Show("퇴직/이직사유를 입력해주세요.");
-                    return;
-                }
-                else
-                {
-                    MessageBox.Show("수정하실 내용을 수정해주세요.");
-                    btn_control1();
-                    car_com.Enabled = false;
+                    checktext.Text = "Fo_u";
+                    if (String.IsNullOrWhiteSpace(forl_empno.Text))
+                    {
+                        MessageBox.Show("사원번호를 입력하세요.");
+                        return;
+                    }
+                    if (String.IsNullOrWhiteSpace(forl_code.Text))
+                    {
+                        MessageBox.Show("외국어코드를 입력해주세요.");
+                        return;
+                    }
+                    if (String.IsNullOrWhiteSpace(forl_score.Text))
+                    {
+                        MessageBox.Show("점수를 입력해주세요.");
+                        return;
+                    }
+                    if (String.IsNullOrWhiteSpace(forl_organ.Text))
+                    {
+                        MessageBox.Show("발급기관을 입력해주세요.");
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("수정하실 내용을 입력해주세요.");
+                        btn_control1();
+                        forl_code.Enabled = false;
 
+                    }
                 }
-
-            }
-            else if (tabControl1.SelectedTab.TabIndex == 5)
-            {
-                checktext.Text = "L_u";
-                if (String.IsNullOrWhiteSpace(lic_empno.Text))
-                {
-                    MessageBox.Show("사원번호를 입력하세요.");
-                    return;
-                }
-                if (String.IsNullOrWhiteSpace(lic_code.Text))
-                {
-                    MessageBox.Show("자격면허코드를 입력해주세요.");
-                    return;
-                }
-                if (String.IsNullOrWhiteSpace(lic_grade.Text))
-                {
-                    MessageBox.Show("급수를 입력해주세요.");
-                    return;
-                }
-                if (String.IsNullOrWhiteSpace(lic_organ.Text))
-                {
-                    MessageBox.Show("발급기관을 입력해주세요.");
-                    return;
-                }
-                else
-                {
-                    MessageBox.Show("수정하실 내용을 수정해주세요.");
-                    btn_control1();
-                    lic_code.Enabled = false;
-
-                }
-            }
-            else if (tabControl1.SelectedTab.TabIndex == 6)
-            {
-                checktext.Text = "Fo_u";
-                if (String.IsNullOrWhiteSpace(forl_empno.Text))
-                {
-                    MessageBox.Show("사원번호를 입력하세요.");
-                    return;
-                }
-                if (String.IsNullOrWhiteSpace(forl_code.Text))
-                {
-                    MessageBox.Show("외국어코드를 입력해주세요.");
-                    return;
-                }
-                if (String.IsNullOrWhiteSpace(forl_score.Text))
-                {
-                    MessageBox.Show("점수를 입력해주세요.");
-                    return;
-                }
-                if (String.IsNullOrWhiteSpace(forl_organ.Text))
-                {
-                    MessageBox.Show("발급기관을 입력해주세요.");
-                    return;
-                }
-                else
-                {
-                    MessageBox.Show("수정하실 내용을 입력해주세요.");
-                    btn_control1();
-                    forl_code.Enabled = false;
-
-                }
-            }
         }
 
         private void bas_acc_bank1_SelectedIndexChanged(object sender, EventArgs e)
